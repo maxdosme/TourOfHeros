@@ -19,15 +19,18 @@ export class HeroesComponent implements OnInit {
   //   // 调用hero.service.ts 下的heroService.getHeroes();不返还。
   //   this.heroes = this.heroService.getHeroes()
   // }
+  // .subscribe Rxjs的方法。
   getHeroes(): void{
     this.heroService.getHeroes()
     .subscribe(heroes => this.heroes = heroes);
   }
 
+  // 在任何其它生命周期钩子之前调用。可以用它来注入依赖项，但不要在这里做正事。(private:注册为私有属性)注册后才可以在HTML模板进行绑定
   constructor(private heroService: HeroService) { }
 
+  // 在调用完构造函数、初始化完所有输入属性并首次调用过ngOnChanges之后调用。
   ngOnInit() {
-    // this.getHeroes()
+    this.getHeroes()
   }
 
 

@@ -1,3 +1,8 @@
-<p>
-  messages works!
-</p>
+<!-- 如果message.service 的messages有内容则显示 -->
+<div *ngIf="messageService.messages.length">
+  <h2>Messages</h2>
+  <!-- 绑定clear事件 -->
+  <button class="clear" (click)="messageService.clear()">CLEAR</button>
+  <!-- 显示信息 -->
+  <div *ngFor="let message of messageService.messages">{{ message }}</div>
+</div>
