@@ -4,6 +4,8 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 // 引入路由跳转component
 import { HeroesComponent } from './heroes/heroes.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+
 
 // 定义路由表
   const routes: Routes = [
@@ -12,6 +14,16 @@ import { HeroesComponent } from './heroes/heroes.component';
       path: 'heroes',
       // 创建模板
       component: HeroesComponent
+    },
+    // 默认路由
+    {
+      path: '',
+      redirectTo: '/dashboard',
+      pathMatch: 'full'
+    },
+    {
+      path: 'dashboard',
+      component: DashboardComponent
     }
   ];  
 
