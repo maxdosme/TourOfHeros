@@ -5,6 +5,7 @@ import { RouterModule, Routes } from '@angular/router';
 // 引入路由跳转component
 import { HeroesComponent } from './heroes/heroes.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { HeroDetailComponent } from './hero-detail/hero-detail.component';
 
 
 // 定义路由表
@@ -21,9 +22,15 @@ import { DashboardComponent } from './dashboard/dashboard.component';
       redirectTo: '/dashboard',
       pathMatch: 'full'
     },
+    // dashboard组件
     {
       path: 'dashboard',
       component: DashboardComponent
+    },
+    // 英雄详情视图
+    {
+      path: 'detail:/id',
+      component: HeroDetailComponent
     }
   ];  
 

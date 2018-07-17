@@ -11,7 +11,7 @@ export class HeroesComponent implements OnInit {
 
   // 把该组件的 hero 属性改名为 selectedHero，但不要为它赋值,
   // 它会把模板中被点击的英雄赋值给组件的 selectedHero 属性。Hero 已被改名为：selectedHero
-  selectedHero: Hero;   //undefined
+  // selectedHero: Hero;   //undefined
   
   heroes: Hero[];
 
@@ -34,9 +34,9 @@ export class HeroesComponent implements OnInit {
   }
 
 
-  // 添加click事件:void 不返回;
-  onSelect(hero: Hero): void {
-    this.selectedHero = hero;
-  }
+  // // 添加click事件:void 不返回;
+  // onSelect(hero: Hero): void {
+  //   this.selectedHero = hero;
+  // }
 
 }

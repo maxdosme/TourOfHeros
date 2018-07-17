@@ -18,8 +18,17 @@ export class HeroService {
   // 修改 getHeroes 方法，在获取到英雄数组时发送一条消息。
   this.messageService.add('HeroService: fetched heroes');
   return of(HEROES);
-}
+  }
   
-// 修改这个构造函数，添加一个私有的 messageService 属性参数。 Angular 将会在创建 HeroService 时把 MessageService 的单例注入到这个属性中。(private:注册为私有属性)
+  // 修改这个构造函数，添加一个私有的 messageService 属性参数。 Angular 将会在创建 HeroService 时把 MessageService 的单例注入到这个属性中。(private:注册为私有属性)
   constructor(private messageService: MessageService) { }
+
+  // 获取英雄后发送消息
+  getHero(id: number): Observable<Hero>{
+    this.messageService.add(`HeroService: fetched hero id=${id}`);
+    return of(HEROES.find(hero => hero.id === id));
+  }
 }
+
+
+  

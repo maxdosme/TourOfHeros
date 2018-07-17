@@ -18,6 +18,7 @@ h1 {
     border-radius: 4px;
   }
   nav a:visited, a:link {
+    margin-left: 10px;
     color: #607D8B;
   }
   nav a:hover {
