@@ -29,7 +29,7 @@ import { HeroDetailComponent } from './hero-detail/hero-detail.component';
     },
     // 英雄详情视图
     {
-      path: 'detail:/id',
+      path: 'detail/:id',
       component: HeroDetailComponent
     }
   ];  
